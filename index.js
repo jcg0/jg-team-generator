@@ -110,3 +110,15 @@ const writeHtml = function (data) {
       : console.log("success");
   });
 };
+
+addManager()
+  .then(addEmployee)
+  .then((teamArr) => {
+    return generateHTML(teamArr);
+  })
+  .then((html) => {
+    return writeHtml(html);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
