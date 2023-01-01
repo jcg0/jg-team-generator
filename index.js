@@ -101,3 +101,12 @@ const addEmployee = function () {
       }
     });
 };
+
+const writeHtml = function (data) {
+  fs.writeFile("./dist/index.html", data, (err) => {
+    console.log(data);
+    err
+      ? console.log(err, "uh oh something went wrong")
+      : console.log("success");
+  });
+};
