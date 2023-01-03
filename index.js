@@ -8,28 +8,28 @@ const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
 
 const teamArr = [];
-const addManager = function () {
-  inquirer
+const addManager = () => {
+  return inquirer
     .prompt([
       {
         type: "input",
         name: "name",
-        message: "Manager name?",
+        message: "What is the manager's name?",
       },
       {
         type: "input",
         name: "id",
-        message: "What is the Manager's ID number?",
+        message: "What is the manager's ID number?",
       },
       {
         type: "input",
         name: "email",
-        message: "What is the Manager's email address?",
+        message: "What is the manager's email address?",
       },
       {
         type: "input",
         name: "officeNumber",
-        message: "What is the Manager's office number?",
+        message: "What is the manager's office number?",
       },
     ])
     .then((answers) => {
@@ -40,8 +40,8 @@ const addManager = function () {
     });
 };
 
-const addEmployee = function () {
-  inquirer
+const addEmployee = () => {
+  return inquirer
     .prompt([
       {
         type: "list",
@@ -102,12 +102,12 @@ const addEmployee = function () {
     });
 };
 
-const writeHtml = function (data) {
+const writeFile = function (data) {
   fs.writeFile("./dist/index.html", data, (err) => {
-    console.log(data);
-    err
-      ? console.log(err, "uh oh something went wrong")
-      : console.log("success");
+    console.log(data),
+      err
+        ? console.log(err, "uh oh something went wrong")
+        : console.log("success");
   });
 };
 
@@ -116,8 +116,8 @@ addManager()
   .then((teamArr) => {
     return generateHTML(teamArr);
   })
-  .then((html) => {
-    return writeHtml(html);
+  .then((page) => {
+    return writeFile(page);
   })
   .catch((err) => {
     console.log(err);
