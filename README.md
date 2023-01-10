@@ -1,4 +1,10 @@
-# mod10-challenge
+# jg-team-generator
+
+# Description
+This was a fun assignment because it really solidified how important and useful the class structure can be. I liked being able to access data from other files and using classes made it super easy. It felt good to practice more Inquirer as it seems to be pretty important to the class and the challenge 12.
+
+link to walkthrough:  https://www.loom.com/share/0d18e4ea9e2d4d60a8c998a264df0294
+
 
 # AC
 
